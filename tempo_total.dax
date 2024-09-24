@@ -1,0 +1,9 @@
+Tempo_Total = 
+SUMX(
+    DataSourceConnection, 
+    DATEDIFF(
+        DataSourceConnection[dtInicio], 
+        IF(ISBLANK(DataSourceConnection[dtFimAtualizado]), TODAY(), DataSourceConnection[dtFimAtualizado]), 
+        DAY
+    )
+)
