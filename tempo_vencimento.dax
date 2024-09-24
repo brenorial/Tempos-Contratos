@@ -1,0 +1,9 @@
+Tempo_Vencimento = 
+SUMX(
+    DataSourceConnection, 
+    DATEDIFF(
+        DataSourceConnection[dtFimAtualizado], 
+        TODAY(),         
+        DAY
+    )
+)
