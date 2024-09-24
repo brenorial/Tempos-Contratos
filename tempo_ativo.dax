@@ -1,0 +1,9 @@
+Tempo_Ativo = 
+SUMX(
+    DataSourceConnection, 
+    DATEDIFF(
+        DataSourceConnection[dtInicio], 
+        TODAY(), 
+        DAY
+    )
+)
